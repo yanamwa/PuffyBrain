@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="sprofile.css">
+
+       <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+            <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   
+        </head>
+    <title>Edit Profile About you</title>
+    
+</head>
+<body>
+
+      <div class="grid-container">   
+<div class="header-container">
+    <!-- Search bar in the left -->
+    <form action="#" method="get" class="search-bar">
+        <input type="text" name="search" placeholder="Search your decks">
+        <i class="bx bx-search"></i>    
+    </form>
+
+
+      <!-- Profile section on the right -->
+      <div class="profile-wrapper">
+
+        <div class="dp-container">
+          <img src="../images/temporary profile.jpg" alt="Profile Picture" class="profile-pic">
+        </div>
+
+        <div class="user-info">
+          <p style="font-size: 20px; font-weight: normal; ">@meiko</p>
+        </div>
+
+<div class="dropdown">
+  <button type="button" class="dropdown-btn" onclick="toggleDropdown()">
+    <i class="bx bx-chevron-down"></i>
+  </button>
+
+  <div class="dropdown-content" id="dropdownMenu">
+    <a href="../setting profile/settings.html">
+      <i class="bx bx-cog"></i>
+      <span>Settings</span>
+    </a>
+
+    <a href="../header/faq.html">
+      <i class="bx bx-help-circle"></i>
+      <span>FAQs</span>
+    </a>
+
+    <a href="../user account/login.html">
+      <i class="bx bx-log-out"></i>
+      <span>Logout</span>
+    </a>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+<aside class="sidebar">
+
+  <div>
+      <div class="logo">
+          <img src="../images/logo.png" alt="Logo">
+      </div>
+          <p class="my-decks">Menu</p>
+
+      <nav class="menu">
+          <ul class="sidebar-list">
+              <li class="sidebar-list-item">
+                  <a href="../User_Navigations/home.html" class="menu-item">
+                      <i class="bx bx-home"></i>
+                      <span>Home</span>
+                  </a>
+              </li>
+
+              <li class="sidebar-list-item">
+                  <a href="../User_Navigations/Mydecks.html" class="menu-item">
+                      <i class="bx bx-book"></i>
+                      <span>Decks</span>
+                  </a>
+              </li>
+
+              <li class="sidebar-list-item">
+                  <a href="../public deck/public deck.html" class="menu-item">
+                      <i class="bx bx-folder"></i>
+                      <span>Public Decks</span>
+                  </a>
+              </li>
+          </ul>
+      </nav>
+
+  <!-- My Decks -->
+        <nav class="mydecks">
+            <p class="my-decks">My Decks</p>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="../User Decks/modess.html">
+                        <i class="bx bx-book"></i>
+                        <span>Lesson 1 to 3 Networking</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="../User Decks/methods2.html">
+                        <i class="bx bx-book"></i>
+                        <span>Method of Research Lesson 2 </span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="../User Decks/methods3 copy.html">
+                        <i class="bx bx-book"></i>
+                        <span>Method of Research Lesson 3 </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+  </div>
+
+  <!-- Bottom logout -->
+  <nav class="logout">
+      <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+              <a href="../user account/login.html" class="menu-item">
+                  <i class="bx bx-log-out"></i>
+                  <span>Logout</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+
+</aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+     <div class="edit-profile">
+      <div class="frame">
+
+      <div class="group">
+        <div class="frame-wrapper">
+            <div class="frame-3">
+
+            </div>
+        </div>
+        <div class="frame-4">
+          <div class="text-wrapper-4">Personal Information</div>
+        </div>
+        
+        <div class="frame-6">
+        
+        </div>
+      </div>
+
+      <div class="rectangle-3"></div>
+      <div class="text-wrapper-6">Personal Information</div>
+      <div class="group-2"></div>
+
+            <div class="frame-10">
+                <div class="text-wrapper-7">About you</div>
+                <div class="rectangle-4"></div>
+<div class="edit-row">
+
+    <div class="user-input">
+<div class="input-group">
+    <label>Username</label>
+    <div class="password-wrapper">
+        <input type="text" id="username" placeholder="Enter your new username">
+    </div>
+</div>
+
+<div class="input-group">
+    <label>Email Address</label>
+    <div class="password-wrapper">
+        <input type="email" id="email" placeholder="Enter your new email address">
+    </div>
+</div>
+
+<div class="input-group">
+    <label>Name of School</label>
+    <div class="password-wrapper">
+        <input type="text" id="school" placeholder="Enter your school name">
+    </div>
+</div>
+
+<div class="input-group">
+    <label>Year Level</label>
+    <div class="password-wrapper">
+        <input type="text" id="yearLevel" placeholder="Enter your year level">
+    </div>
+</div>
+
+                    
+      <!-- Right Column - Photo Upload -->
+                        <div class="photo-section">
+                            <label class="photo-label">
+              <button class="start-btn">Save Changes</button>
+                        </div>
+                    </div>
+
+       <div class="nav-actions">
+                <div class="photo-section">
+                            <label class="photo-label">
+                                <div id="photoContainer" class="photo-container">
+                                    <div class="photo-icon-wrapper">
+                                        <svg class="photo-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4" stroke-width="2"></circle>
+                                        </svg>
+                                    </div>
+                                    <span class="photo-text">Upload Photo</span>
+                                </div>
+                                <input
+                                    type="file"
+                                    id="photoUpload"
+                                    accept="image/*"
+                                    class="photo-input"
+                                />
+                            </label>
+                            <p class="photo-hint">
+                                Recommend ratio 1:1 and file less<br />than 5mb
+                            </p>
+                        </div>
+                    </div>
+                </div>
+</div>
+
+      </div>
+      <div class="text-wrapper-14">Edit Profile</div>
+
+      <div class="text-wrapper-15 clickable">Settings</div>
+
+      <div class="rectangle-8 clickable"></div>
+    </div>
+
+
+    <!-- ============================================ -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================================ -->
+    <script>
+        document.querySelectorAll('.clickable').forEach(btn => {
+    btn.addEventListener('click', function() {
+        window.location.href = "settings.html";
+    });
+});
+
+// DROPDOWN
+function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e) {
+    const dropdown = document.querySelector(".dropdown");
+    if (!dropdown.contains(e.target)) {
+        document.getElementById("dropdownMenu").classList.remove("show");
+    }
+});
+
+// PASSWORD TOGGLE FUNCTION
+function setupToggle(toggleId, inputId) {
+    const toggle = document.getElementById(toggleId);
+    const input = document.getElementById(inputId);
+
+    toggle.addEventListener("click", function () {
+        input.type = input.type === "password" ? "text" : "password";
+        toggle.classList.toggle("fa-eye");
+        toggle.classList.toggle("fa-eye-slash");
+    });
+}
+
+// PHOTO PREVIEW
+const photoUpload = document.getElementById("photoUpload");
+const photoContainer = document.getElementById("photoContainer");
+
+photoUpload.addEventListener("change", function(event) {
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    // check file size
+    if (file.size > 5 * 1024 * 1024) {
+        Swal.fire({
+            icon: "error",
+            title: "File too large!",
+            text: "File must be less than 5MB"
+        });
+        event.target.value = "";
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+
+        photoContainer.innerHTML = `
+            <img src="${e.target.result}" 
+                 style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+        `;
+    };
+
+    reader.readAsDataURL(file);
+});
+
+// SAVE BUTTON
+const saveBtn = document.querySelector(".start-btn");
+
+saveBtn.addEventListener("click", function(e){
+    e.preventDefault();
+
+    Swal.fire({
+        title: "Profile Updated!",
+        text: "Your changes has been saved.",
+        imageUrl: "../images/success.png",
+        imageWidth: 200,
+        imageHeight: 200,
+        timer: 1500,
+        showConfirmButton: false,
+        customClass: {
+            popup: "my-popup",
+            confirmButton: "my-confirm-btn",
+            cancelButton: "my-cancel-btn",
+            title: "my-title",
+            htmlContainer: "my-text"
+        }
+    });
+});
+    </script>
+</body>
+</html>

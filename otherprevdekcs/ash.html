@@ -1,0 +1,215 @@
+<html>
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" href="ash.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>  
+  <div class="container"> 
+  <div class="grid-container">   
+<div class="header-container">
+    <!-- Search bar in the left -->
+    <form action="#" method="get" class="search-bar">
+        <input type="text" name="search" placeholder="Search your decks">
+        <i class="bx bx-search"></i>    
+    </form>
+
+
+      <!-- Profile section on the right -->
+      <div class="profile-wrapper">
+
+        <div class="dp-container">
+          <img src="../images/temporary profile.jpg" alt="Profile Picture" class="profile-pic">
+        </div>
+
+        <div class="user-info">
+          <p style="font-size: 20px; font-weight: normal; ">@meiko</p>
+        </div>
+
+<div class="dropdown">
+  <button type="button" class="dropdown-btn" onclick="toggleDropdown()">
+    <i class="bx bx-chevron-down"></i>
+  </button>
+
+  <div class="dropdown-content" id="dropdownMenu">
+    <a href="../setting profile/settings.html">
+      <i class="bx bx-cog"></i>
+      <span>Settings</span>
+    </a>
+
+    <a href="../header/faq.html">
+      <i class="bx bx-help-circle"></i>
+      <span>FAQs</span>
+    </a>
+
+    <a href="../user account/login.html">
+      <i class="bx bx-log-out"></i>
+      <span>Logout</span>
+    </a>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+<aside class="sidebar">
+
+  <div>
+      <div class="logo">
+          <img src="../images/logo.png" alt="Logo">
+      </div>
+          <p class="my-decks">Menu</p>
+
+      <nav class="menu">
+          <ul class="sidebar-list">
+              <li class="sidebar-list-item">
+                  <a href="../User_Navigations/home.html" class="menu-item">
+                      <i class="bx bx-home"></i>
+                      <span>Home</span>
+                  </a>
+              </li>
+
+              <li class="sidebar-list-item">
+                  <a href="../User_Navigations/Mydecks.html" class="menu-item">
+                      <i class="bx bx-book"></i>
+                      <span>Decks</span>
+                  </a>
+              </li>
+
+              <li class="sidebar-list-item">
+                  <a href="../public deck/public deck.html" class="menu-item active">
+                      <i class="bx bx-folder"></i>
+                      <span>Public Decks</span>
+                  </a>
+              </li>
+          </ul>
+      </nav>
+
+  <!-- My Decks -->
+        <nav class="mydecks">
+            <p class="my-decks">My Decks</p>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="../User Decks/modess.html">
+                        <i class="bx bx-book"></i>
+                        <span>Lesson 1 to 3 Networking</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="../User Decks/methods2.html">
+                        <i class="bx bx-book"></i>
+                        <span>Method of Research Lesson 2 </span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="../User Decks/methods3 copy.html">
+                        <i class="bx bx-book"></i>
+                        <span>Method of Research Lesson 3 </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+  </div>
+
+  <!-- Bottom logout -->
+  <nav class="logout">
+      <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+              <a href="../user account/login.html" class="menu-item">
+                  <i class="bx bx-log-out"></i>
+                  <span>Logout</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+</aside>
+
+
+
+<main>
+    <div class="other-user-decks-container">
+        <div class="left-info">
+            <h1 class="section-title">Student ID Card</h1>
+            <div class="dashed-line"></div>
+            
+<div class="user-profile-info">
+    <p class="user-label">Username:</p>
+    <p class="user-value">Ashh</p>
+
+    <p class="user-label" style="margin-left: 110px;">Year:</p>
+    <p class="user-value">3rd Year</p>
+</div>
+
+<div class="user-profile-info">
+    <p class="user-label">School:</p>
+    <p class="user-value">Cavite State University Imus Campus</p>
+</div>
+
+<div class="signature-row">
+    <p class="signature-label">Signature:</p>
+    <h3 class="signature">Ashh</h3>
+</div>
+
+
+        <div class="profile-container">
+            <img src="../otherprevdekcs/image/ash.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="barcode">
+        </div>
+    </div>
+</main>
+
+
+            
+ <section class="decks">
+  <h2>Public Decks</h2>
+
+  <div class="decks-grid">
+    <a href="../otherprevdekcs/otherprevdeck3.html" class="deck-link">
+      <div class="deck-card">
+        <div class="deck-tab"></div>
+        <div class="deck-info">
+          <p>System Analysis And Design
+</p>
+          <small class="custom-small">10 cards</small>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+</main>
+
+    </body>
+</html>
+
+<script>
+function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+// Optional: Close dropdown if user clicks outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown-btn') && !event.target.matches('.dropdown-btn *')) {
+    document.querySelectorAll(".dropdown-content").forEach(menu => {
+        menu.classList.remove("show");
+    });
+  }
+};
+
+const currentPage = window.location.pathname.split("/").pop();
+document.querySelectorAll(".sidebar .menu-item").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+    }
+});
+
+</script>
+

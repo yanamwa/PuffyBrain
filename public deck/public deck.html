@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Public Decks</title>
+    <link rel="stylesheet" href="public deck.css" />
+               <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+            <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<div class="container"> 
+  <div class="grid-container">   
+<div class="header-container">
+    <!-- Search bar in the left -->
+    <form action="#" method="get" class="search-bar">
+        <input type="text" name="search" placeholder="Search your decks">
+        <i class="bx bx-search"></i>    
+    </form>
+
+
+      <!-- Profile section on the right -->
+      <div class="profile-wrapper">
+
+        <div class="dp-container">
+          <img src="../images/temporary profile.jpg" alt="Profile Picture" class="profile-pic">
+        </div>
+
+        <div class="user-info">
+          <p style="font-size: 20px; font-weight: normal; ">@meiko</p>
+        </div>
+<div class="dropdown">
+  <button type="button" class="dropdown-btn" onclick="toggleDropdown()">
+    <i class="bx bx-chevron-down"></i>
+  </button>
+
+  <div class="dropdown-content" id="dropdownMenu">
+    <a href="../setting profile/settings.html">
+      <i class="bx bx-cog"></i>
+      <span>Settings</span>
+    </a>
+
+    <a href="../header/faq.html">
+      <i class="bx bx-help-circle"></i>
+      <span>FAQs</span>
+    </a>
+
+    <a href="../user account/login.html">
+      <i class="bx bx-log-out"></i>
+      <span>Logout</span>
+    </a>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+<aside class="sidebar">
+
+  <div>
+      <div class="logo">
+          <img src="../images/logo.png" alt="Logo">
+      </div>
+          <p class="my-decks">Menu</p>
+
+      <nav class="menu">
+          <ul class="sidebar-list">
+              <li class="sidebar-list-item">
+                  <a href="../User_Navigations/home.html" class="menu-item">
+                      <i class="bx bx-home"></i>
+                      <span>Home</span>
+                  </a>
+              </li>
+
+              <li class="sidebar-list-item">
+                  <a href="../User_Navigations/Mydecks.html" class="menu-item">
+                      <i class="bx bx-book"></i>
+                      <span>Decks</span>
+                  </a>
+              </li>
+
+              <li class="sidebar-list-item">
+                  <a href="../public deck/public deck.html" class="menu-item active">
+                      <i class="bx bx-folder"></i>
+                      <span>Public Decks</span>
+                  </a>
+              </li>
+          </ul>
+      </nav>
+
+  <!-- My Decks -->
+        <nav class="mydecks">
+            <p class="my-decks">My Decks</p>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="../User Decks/modess.html">
+                        <i class="bx bx-book"></i>
+                        <span>Lesson 1 to 3 Networking</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="../User Decks/methods2.html">
+                        <i class="bx bx-book"></i>
+                        <span>Method of Research Lesson 2 </span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="../User Decks/methods3 copy.html">
+                        <i class="bx bx-book"></i>
+                        <span>Method of Research Lesson 3 </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+  </div>
+
+  <!-- Bottom logout -->
+  <nav class="logout">
+      <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+              <a href="../user account/login.html" class="menu-item">
+                  <i class="bx bx-log-out"></i>
+                  <span>Logout</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+
+</aside>
+    <main class="main">
+        <div class="subject-search">
+            <input type="text" placeholder="Type a subject to explore public decks" />
+            <button></button>
+        </div>
+
+
+  <section class="cards">
+    <a href="../otherprevdekcs/otherprevdeck2.html" class="card purple"><h4>Information Assurance</h4><p>17 cards</p></a>
+    <a href="../otherprevdekcs/otherprevdeck3.html" class="card red"><h4>System Analysis And Design</h4><p>10 cards</p></a>
+    <a href="" class="card yellow"><h4>Arduino Uno Components</h4><p>27 cards</p></a>
+    <a href="" class="card purple"><h4>Social Engineering</h4><p>33 cards</p></a>
+    <a href=""" class="card green"><h4>Information Assurance</h4><p>18 cards</p></a>
+    <a href="" class="card yellow"><h4>Information Security</h4><p>26 cards</p></a>
+    <a href="" class="card purple"><h4>Introduction to Robotics</h4><p>50 cards</p></a>
+    <a href="" class="card blue"><h4>Computer Network Topologies</h4><p>37 cards</p></a>
+    <a href="" class="card purple"><h4>Types of Computer Networks</h4><p>29 cards</p></a>
+    <a href="" class="card red"><h4>Emerging Technology</h4><p>41 cards</p></a>
+    <a href="" class="card blue"><h4>System Integration</h4><p>69 cards</p></a>
+    <a href="" class="card green"><h4>MySQL Subquery</h4><p>33 cards</p></a>
+</section>
+
+    </main>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('open');
+}
+</script>
+
+            <script>
+                function toggleDropdown() {
+                const menu = document.getElementById("dropdownMenu");
+                menu.classList.toggle("show");
+            }
+
+                document.addEventListener("click", function(e) {
+                const dropdown = document.querySelector(".dropdown");
+    
+            if (!dropdown.contains(e.target)) {
+                document.getElementById("dropdownMenu").classList.remove("show");
+            }
+            });
+            </script>
+
+</body>
+</html>

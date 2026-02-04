@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="your score.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Your Score</title>
+</head>
+<body>
+  <script>
+    constscore = localStorage.getItem('quizScore');
+    document.getElementById('score').textContent = score || 0;
+  </script>
+</body>
+</html>
+
+
+    <div class="quiz-container">
+        <header>
+            <p class="current-score-text" id="score-text">You Scored 0/0</p>
+            <p class="encouragement" id="encouragement-text">Keep Practicing!</p>
+        </header>
+
+    <div id="buttons-container">
+ <button class="try-again" onclick="tryAgain()">Try Again</button>
+
+<script>
+function tryAgain() {
+    localStorage.removeItem("score");
+    window.location.href = "index.html";
+}
+</script>     
+
+<button class="go-home" onclick="window.location.href='../User Decks/modess.html'">
+    Go Home
+</button>
+
+    </div>
+
+</section>
+
+       <!-- HEADER -->
+<div class="header-box">
+    <div class="header-top">
+        <h1 class="title" style="font-weight: normal;">Review the Answers</h1>
+    </div>
+
+      <div class="review-item">
+        <strong>The function that runs only once at the beginning of an Arduino program.</strong>
+        <p>setup()</p>
+      </div>
+
+      <div class="review-item">
+        <strong>What is the most commonly used Arduino board for beginners?</strong>
+        <p>Arduino Uno</p>
+      </div>
+
+      <div class="review-item">
+        <strong>Which pin on the Arduino is used for ground connection?</strong>
+        <p>GND</p>
+      </div>
+    </div>
+        </main>
+    </div>
+
+
+    <script>
+        // Get the score from localStorage
+        const score = localStorage.getItem('quizScore') || 0;
+        
+        // Assuming total questions = total matched pairs
+        const totalQuestions = document.querySelectorAll('.review-item').length;
+
+        // Update score text
+        const scoreText = document.getElementById('score-text');
+        scoreText.textContent = `You Scored ${score}/${totalQuestions}`;
+
+        // Optional encouragement text based on performance
+        const encouragementText = document.getElementById('encouragement-text');
+        const percentage = (score / totalQuestions) * 100;
+        if (percentage === 100) {
+            encouragementText.textContent = "Perfect! Excellent job!";
+        } else if (percentage >= 70) {
+            encouragementText.textContent = "Great work! Keep practicing!";
+        } else {
+            encouragementText.textContent = "Don't give up! Try again!";
+        }
+
+        // Button functions
+        function handleTryAgain() {
+            window.location.href = 'application_dep.html'; // go back to quiz
+        }
+
+        function handleGoHome() {
+            window.location.href = 'index.html'; // or your home page
+        }
+    </script>
+</body>
+</html>

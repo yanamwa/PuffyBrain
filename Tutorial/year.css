@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Jersey 15", sans-serif;
+    background: linear-gradient(180deg, #D39FF7 0%, #AEB6FF 100%);
+}
+
+.notebook {
+    width: 650px;
+    background: #e7d4fb;
+    border-radius: 25px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    position: relative;
+    box-shadow: 10px 10px 0 #c9c8f8;
+}
+.tabs {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.tab {
+    background: #d1b7f8;
+    padding: 10px 30px;
+    border-radius: 20px 20px 0 0;
+    font-size: 14px;
+    color: white;
+}
+
+.tab.active {
+    background: white;
+    color: black;
+        background: repeating-linear-gradient(
+      white,
+      white 30px,
+      #e4e4e4 31px
+    );
+    margin: auto;
+    text-align: center;
+       transform: translateY(-8px);
+}
+
+.bookmark {
+    position: absolute;
+    right: 40px;
+    top: 0;
+    width: 30px;
+    height: 85px;
+    background: #d48bda;
+    border-radius: 0 0 5px 5px;
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 100%, 0 65%);
+}
+
+.page {
+    background: repeating-linear-gradient(
+      white,
+      white 30px,
+      #e4e4e4 31px
+    );
+    width: 85%;
+    margin: auto;
+    padding: 40px 0;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.page h1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.page input[type="text"] {
+    width: 300px;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 30px;
+    background: #fadeebcc;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #b996e1;
+    color: var(--font-color);
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: block;          
+    margin: 15px auto 0;     
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 5px 5px 0 #cbd0f9;  
+    width: 400px;
+}
+
+.submit-btn:hover {
+    transform: scale(1.07);
+    background-color: #a478d8;
+}
+
+.notebook {
+    box-shadow: 8px 8px 0 #cbd0f9;
+}

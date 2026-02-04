@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Management</title>
+      <link rel="stylesheet" href="quizmanage.css" />
+              <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+            <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>  
+    <div class="container"> 
+        <div class="grid-container"> 
+          <div class="header-container"> 
+            <!-- Search bar in the left --> 
+             <form action="#" method="get" class="search-bar"> 
+              <input type="text" name="search" placeholder="Search your decks"> 
+              <i class="bx bx-search"></i> 
+             </form> <!-- Profile section on the right --> 
+             <div class="profile-wrapper"> 
+              <div class="dp-container"> 
+                <img src="../images/temporary profile.jpg" alt="Profile Picture" class="profile-pic"> 
+              </div> 
+              <div class="user-info"> 
+                <p style="font-size: 20px; font-weight: normal; ">@admin</p> 
+              </div> <div class="dropdown"> 
+                <button type="button" class="dropdown-btn" onclick="toggleDropdown()"> 
+                  <i class="bx bx-chevron-down"></i> 
+                </button> 
+                <div class="dropdown-content" id="dropdownMenu"> 
+                  <a href="../AdminDashboard/adminseettings.html"> 
+                    <i class="bx bx-cog"></i> 
+                    <span>Settings</span> </a> 
+                  <a href="logout.php"> 
+                    <i class="bx bx-log-out"></i> 
+                    <span>Logout</span> </a> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+            <aside class="sidebar"> 
+              <div class="logo"> 
+                <img src="../images/logo.png" alt="Logo"> 
+              </div> 
+              <p class="my-decks">Menu</p> 
+              <nav class="menu"> 
+                <ul class="sidebar-list"> 
+                  <li class="sidebar-list-item"> 
+                    <a href="../AdminDashboard/AdminDashboard.html" class="menu-item"> 
+                      <i class="bx bx-home"></i> 
+                      <span>Dashboard</span> 
+                    </a> </li> 
+                    <li class="sidebar-list-item"> 
+                      <a href="../Admin User Management/usermanagement.html" class="menu-item"> 
+                        <i class="bx bx-book"></i> 
+                        <span>User Management</span> 
+                      </a> </li> 
+                      <li class="sidebar-list-item"> 
+                        <a href="../AdminDashboard/quiz management.html" class="menu-item active"> 
+                          <i class="bx bx-folder"></i> 
+                          <span>Quiz Management</span> </a> 
+                        </li> 
+                      </ul> 
+                    </nav> 
+                    <!-- Bottom logout --> 
+                     <nav class="logout"> 
+                      <ul class="sidebar-list"> 
+                        <li class="sidebar-list-item"> 
+                          <a href="../AdminDashboard/adminlogin.html" class="menu-item" style="f"> 
+                            <i class="bx bx-log-out"></i> 
+                            <span>Logout</span> 
+                          </a> 
+                        </li> 
+                      </ul> 
+                    </nav> 
+                  </aside> 
+
+        
+        <h1>Quiz Management</h1>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Quiz title</th>
+                        <th>Creator</th>
+                        <th>Date created</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>QZ2025A01</td>
+                        <td>rairai</td>
+                        <td>10/11/2025</td>
+                        <td><button class="view-btn" onclick="openModal('QZ2025A01', 'rairai', '10/11/2025')">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>BK06A2025</td>
+                        <td>Paps</td>
+                        <td>11/27/2025</td>
+                        <td><button class="view-btn" onclick="openModal('BK06A2025', 'Paps', '11/27/2025')">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>BK07A2025</td>
+                        <td>Larah</td>
+                        <td>12/17/2025</td>
+                        <td><button class="view-btn" onclick="openModal('BK07A2025', 'Larah', '12/17/2025')">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>BK08A2025</td>
+                        <td>meiko</td>
+                        <td>11/22/2025</td>
+                        <td><button class="view-btn" onclick="openModal('BK08A2025', 'meiko', '11/22/2025')">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>BK09A2025</td>
+                        <td>jessy</td>
+                        <td>11/16/2025</td>
+                        <td><button class="view-btn" onclick="openModal('BK09A2025', 'jessy', '11/16/2025')">View</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="pagination-container">
+                <div class="page-numbers">
+                    <button class="page-btn">‹</button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">4</button>
+                    <button class="page-btn">5</button>
+                    <span>...</span>
+                    <button class="page-btn">10</button>
+                    <button class="page-btn">›</button>
+                </div>
+                <div class="rows-control">
+                    <span>Show</span>
+                    <select>
+                        <option>10</option>
+                        <option>25</option>
+                        <option>50</option>
+                        <option>100</option>
+                    </select>
+                    <span>Row</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="quizModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Quiz Details:</h2>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="detail-row">
+                    <div class="detail-label">Deck Title</div>
+                    <div class="detail-value" id="modalTitle">Deck Title</div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Deck Description</div>
+                    <div class="detail-value" id="modalDescription">Deck Description</div>
+                </div>
+
+                <div class="detail-label" style="margin-bottom: 15px;">Deck Cards</div>
+                
+                <div class="deck-cards-section">
+                    <div class="card-item">
+                        <div class="card-question">
+                            What is the primary purpose of a "router" in a home network?
+                        </div>
+                        <div class="card-answer">
+                            To forward data between different networks, such as your home network and the internet.
+                        </div>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="card-question">
+                            Which network device is used to amplify a Wi-Fi signal to extend the coverage area of a wireless network?
+                        </div>
+                        <div class="card-answer">
+                            A Wi-Fi Repeater/Extender
+                        </div>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="card-question">
+                            What does the acronym "LAN" commonly stand for?
+                        </div>
+                        <div class="card-answer">
+                            Local Area Network
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <script>
+        function openModal(title, creator, date) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('quizModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('quizModal').classList.remove('active');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('quizModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Pagination functionality
+        document.querySelectorAll('.page-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.textContent !== '‹' && this.textContent !== '›' && this.textContent !== '...') {
+                    document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+    </script>
+        <script>
+function toggleDropdown() {
+  document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+/* Optional: close dropdown when clicking outside */
+window.addEventListener("click", function (e) {
+  if (!e.target.closest(".dropdown")) {
+    const menu = document.getElementById("dropdownMenu");
+    if (menu) menu.classList.remove("show");
+  }
+});
+</script>
+</body>
+</html>
