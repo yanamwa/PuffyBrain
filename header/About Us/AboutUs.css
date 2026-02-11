@@ -32,7 +32,7 @@ body {
     background: #EBD3FA;
     min-height: 80vh;
     overflow-x: hidden;
-    overflow-y: auto;   /* ✅ allow normal flow */
+    overflow-y: auto;   
 }
 .wrapper {
     width: 100%;
@@ -52,7 +52,6 @@ body {
     left: 0;
     z-index: -1;
 }
-
 
 /* CONTAINER WITH BORDER RADIUS */
 .container {
@@ -236,7 +235,7 @@ body {
 }
 
 .about-container {
-    margin: 140px auto 100px;
+    margin: 10px auto 100px;
     display: flex;
     gap: 50px;
     align-items: center;
@@ -264,7 +263,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;   /* ✅ centers everything */
+    align-items: center; 
 }
 
 
@@ -290,21 +289,21 @@ body {
 /* PHOTO HOLDER */
 .photo {
   position: absolute;
-  left: -75px;                 /* closer to card */
+  left: -75px;               
   top: 50%;
   transform: translateY(-50%);
   background-color: #fff;
   border: 1px solid #bbb;
   border-radius: 14px;
   padding: 10px;
-  width: 90px;                 /* SMALLER PHOTO CARD */
+  width: 90px;                
   box-shadow: 0 3px 6px rgba(0,0,0,0.12);
   text-align: center;
 }
 
 .photo img {
   width: 100%;
-  height: 80px;                /* SMALLER IMAGE */
+  height: 80px;               
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -353,7 +352,7 @@ margin-bottom: 130px;
 
 /* INFO ROWS */
 .info {
-  margin: 4px 0;               /* TIGHTER SPACING */
+  margin: 4px 0;             
   font-family: 'Jersey 15', sans-serif;
   font-size: 1.2rem;
   line-height: 1.25;
@@ -365,7 +364,7 @@ margin-bottom: 130px;
 }
 
 .info b {
-  min-width: 70px;             /* aligns labels */
+  min-width: 70px;            
   font-weight: normal;
 }
 
@@ -398,7 +397,7 @@ margin-bottom: 130px;
 /* FOOTER */
 
 .footer {
-    margin-top: 100px;
+    margin-top: 10px;
     background-color: #A993D8;
     color: white;
     text-align: center;
@@ -535,6 +534,30 @@ margin-bottom: 130px;
 
 }
 
-* {
-  outline: 1px solid red;
+
+/*animation*/
+
+.card-container {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+/* when visible */
+.card-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-container.left {
+  transform: translateX(-60px);
+}
+
+.card-container.right {
+  transform: translateX(60px);
+}
+
+.card-container.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
 }

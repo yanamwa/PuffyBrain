@@ -303,8 +303,24 @@
     <p>© 2025 – PuffyBrain All Rights Reserved</p>
 </div>
 
+<script>
+const cards = document.querySelectorAll(".card-container");
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      // 🔥 this makes it reset when you scroll away
+      entry.target.classList.remove("show");
+    }
+  });
+}, {
+  threshold: 0.25
+});
 
+cards.forEach(card => observer.observe(card));
+</script>
 
 </body>
 </html>
