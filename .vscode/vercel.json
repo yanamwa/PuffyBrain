@@ -1,5 +1,5 @@
 {
   "routes": [
-    { "src": "/", "dest": "/header/landingpage.html" }
+    { "src": "/", "dest": "/header/index.html" }
   ]
 }
