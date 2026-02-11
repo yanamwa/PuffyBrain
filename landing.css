@@ -45,7 +45,7 @@ body {
     width: 100%;
     border-radius: 20px;
     height: 100%;
-    background: url('background.png') no-repeat center/cover;
+    background: url('/header/background.png') no-repeat center/cover;
     position: absolute;
     top: 0;
     left: 0;
