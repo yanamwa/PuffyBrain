@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PuffyBrain — User Management</title>
+  <link rel="stylesheet" href="newUserManagement.css" />
+
+              <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+            <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <div class="app">
+    <!-- SIDEBAR -->
+<div class="container"> 
+  <div class="grid-container">   
+<div class="header-container">
+    <!-- Search bar in the left -->
+    <form action="#" method="get" class="search-bar">
+        <input type="text" name="search" placeholder="Search your decks">
+        <i class="bx bx-search"></i>    
+    </form>
+
+
+      <!-- Profile section on the right -->
+      <div class="profile-wrapper">
+
+        <div class="dp-container">
+          <img src="../images/temporary profile.jpg" alt="Profile Picture" class="profile-pic">
+        </div>
+
+        <div class="user-info">
+          <p style="font-size: 20px; font-weight: normal; ">@admin</p>
+        </div>
+
+<div class="dropdown">
+  <button type="button" class="dropdown-btn" onclick="toggleDropdown()">
+    <i class="bx bx-chevron-down"></i>
+  </button>
+
+  <div class="dropdown-content" id="dropdownMenu">
+    <a href="../AdminDashboard/adminseettings.html">
+      <i class="bx bx-cog"></i>
+      <span>Settings</span>
+    </a>
+
+    <a href="../AdminDashboard/adminlogin.html">
+      <i class="bx bx-log-out"></i>
+      <span>Logout</span>
+    </a>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+<aside class="sidebar">
+
+  <div>
+      <div class="logo">
+          <img src="../images/logo.png" alt="Logo">
+      </div>
+          <p class="my-decks">Menu</p>
+
+      <nav class="menu">
+          <ul class="sidebar-list">
+              <li class="sidebar-list-item">
+                  <a href="../AdminDashboard/AdminDashboard.html" class="menu-item ">
+                      <i class="bx bx-home"></i>
+                      <span>Dashboard</span>
+                  </a>
+              </li>
+
+              <li class="sidebar-list-item">
+                  <a href="../Admin User Management/newUserManagement.html" class="menu-item active">
+                      <i class="bx bx-book"></i>
+                      <span>User Management</span>
+                  </a>
+              </li>
+
+              <li class="sidebar-list-item">
+                  <a href="../AdminDashboard/NewQuizManagement.html" class="menu-item ">
+                      <i class="bx bx-folder"></i>
+                      <span>Quiz Management</span>
+                  </a>
+              </li>
+          </ul>
+      </nav>
+
+     
+
+  <!-- Bottom logout -->
+  <nav class="logout">
+      <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+              <a href="../AdminDashboard/adminlogin.html" class="menu-item">
+                  <i class="bx bx-log-out"></i>
+                  <span>Logout</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+
+</aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- TOP BAR -->
+      <section class="content">
+        <h1>User Management</h1>
+                   <div class="table-header"> 
+                    <div>User ID</div> 
+                    <div>Username</div> 
+                    <div>Email</div> 
+                    <div>Action</div> 
+                  </div> 
+
+
+         <div class="table-content"> 
+
+          <div id="userModal" class="modal"> 
+                      <div class="modal-content"> 
+                        <div class="modal-header"> User Profile <span class="close">&times;</span> </div> 
+                        <div class="modal-body"> </div> 
+                      </div> 
+                    </div> 
+
+
+                    <div class="row"> 
+                      <div>BK01A2025</div> 
+                      <div>Izzy</div> 
+                      <div>kizzy@gmail.com</div> 
+                      <button class="view-btn" id="viewIzzy">View</button> 
+                    </div>
+                    
+                    <div class="row"> <div>BK02A2025</div> 
+                    <div>Nikamor</div> 
+                    <div>nikkavlmr@gmail.com</div> 
+                    <button class="view-btn" id="viewNikamor">View</button> 
+                  </div> 
+
+                  <div class="row"> 
+                    <div>BK03A2025</div> 
+                    <div>Maee1</div> 
+                    <div>maemae@gmail.com</div> 
+                    <button class="view-btn" id="viewMaee1">View</button> 
+                  </div> 
+
+                  <div class="row"> 
+                    <div>BK04A2025</div> 
+                    <div>Jayjay</div> 
+                    <div>rwffyjay@gmail.com</div> 
+                    <button class="view-btn" id="viewJayjay">View</button> 
+                  </div> 
+
+                  <div class="row"> 
+                    <div>BK05A2025</div> 
+                    <div>Meiko</div> 
+                    <div>meiko@gmail.com</div> 
+                    <button class="view-btn" id="viewMeiko">View</button> 
+                  </div> 
+
+                </div> 
+
+                <!-- pagination --> 
+                 <div class="pagination"> 
+                  <div class="page-box active">1</div> 
+                  <div class="page-box">2</div> 
+                  <div class="page-box">3</div> 
+                  <div class="page-box">4</div> 
+                  <div class="page-box">5</div> 
+                  <span class="dots">...</span> 
+                  <div class="page-box">10</div> 
+                  <div class="page-box">&#62;</div> 
+                </div> 
+              </div> 
+
+      </section>
+    </main>
+
+
+
+
+                      <script src="usermanagement.js">
+                </script> 
+
+ <script> 
+              function toggleDropdown() 
+              { const menu = document.getElementById("dropdownMenu");
+               menu.classList.toggle("show");
+                } document.addEventListener("click", function(e) { const dropdown = document.querySelector(".dropdown");
+                 if (!dropdown.contains(e.target)) { document.getElementById("dropdownMenu").classList.remove("show");
+
+                  } });
+                  
+                  // Pagination functionality
+        document.querySelectorAll('.page-box').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.textContent !== '‹' && this.textContent !== '›' && this.textContent !== '...') {
+                    document.querySelectorAll('.page-box').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+                  
+                  </script>
+
+</body>
+</html>
+
